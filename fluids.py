@@ -70,7 +70,7 @@ class LCDM(object):
         ########## Finding g(Xi) ############
 
         def intg(self,z3,z,z0,alpha,beta):
-                return (1.-self.co_dis_z(z)/self.co_dis_z(z3))*self.n(z3,z0,alpha,beta)
+                return (1.-self.co_dis_z(z3)/self.co_dis_z(z))*self.n(z3,z0,alpha,beta)
 
         def g(self,z,z0,alpha,beta):  
                 return quad(self.intg,z,5.,args=(z,z0,alpha,beta,))[0]
